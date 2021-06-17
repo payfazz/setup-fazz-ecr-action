@@ -1,11 +1,11 @@
 {
   "name": "setup-fazz-ecr-action",
   "version": "1.0.0",
-  "main": "./ts-build/index.js",
+  "main": "./dist/index.js",
   "private": true,
   "license": "GPL-3.0+",
   "scripts": {
-    "build": "set -x && rm -rf ./ts-build ./dist && tsc && ncc build -m"
+    "build": "rm -rf ./dist && ncc build -m index.ts"
   },
   "devDependencies": {
     "@actions/core": "^1.4.0",

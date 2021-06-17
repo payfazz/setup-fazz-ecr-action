@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
     "moduleResolution": "node",
-    "rootDir": "./",
-    "baseUrl": "./",
-    "outDir": "./ts-build",
     "strict": true
   }
 }
