@@ -1,0 +1,18 @@
+{
+  "name": "setup-fazz-ecr-action",
+  "version": "1.0.0",
+  "main": "./ts-build/index.js",
+  "private": true,
+  "license": "GPL-3.0+",
+  "scripts": {
+    "build": "set -x && rm -rf ./ts-build ./dist && tsc && ncc build -m"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/exec": "^1.1.0",
+    "@actions/tool-cache": "^1.7.1",
+    "@types/node": "^15.12.2",
+    "@vercel/ncc": "^0.28.6",
+    "typescript": "^4.3.3"
+  }
+}
