@@ -20,16 +20,15 @@ const main = async () => {
     info(`Attempting to donwload ${url}`)
     const downloadPath = await downloadTool(url)
     const extractPath = await extractTar(downloadPath)
-    info(`Succesfully extracted to ${extractPath}`)
     toolPath = await cacheDir(extractPath, name, version)
     info(`Successfully cached to ${toolPath}`);
   }
 
-  const exitCode = await exec(join(toolPath, 'docker-credential-fazz-ecr'), ['update-config'])
+  const exitCode = await exec(join(toolPath, 'bin', 'docker-credential-fazz-ecr'), ['update-config'])
   if (exitCode != 0) {
     throw new Error('cannot update docker config')
   }
-  addPath(toolPath)
+  addPath(join(toolPath, 'bin'))
   info(`Successfully setup ${name} version ${version}`)
 }
 
