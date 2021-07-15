@@ -5,7 +5,7 @@ import { find, downloadTool, extractTar, cacheDir } from '@actions/tool-cache'
 import { exec } from '@actions/exec'
 
 const name = 'fazz-ecr'
-const version = 'v0.1.0'
+const version = 'v0.1.1'
 const url = `https://github.com/payfazz/${name}/releases/download/${version}/${name}-${version}-linux-x64.tar.gz`
 
 const main = async () => {
